@@ -1,0 +1,149 @@
+.news-list-filter {
+    width: 600px;
+height: 80px;
+
+opacity: 0px;
+margin: 50px 0px 40px 0px;
+}
+
+.filter-label {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.5px;
+    text-align: left;
+    color: #363636;
+    margin-bottom: 10px;
+}
+.filter-bar {
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0px 8px 24px 0px #0000000D;
+    margin-bottom: 40px;
+
+    
+
+}
+
+.filter-button {
+    border: none;
+    background: none;
+    cursor: text;
+    margin: 15px 20px;
+    color: #575757;
+}
+.filter-input {
+    border: none;
+    width: 85%;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.5px;
+    line-height: 24px;
+    text-align: left;
+    &:focus {
+        outline: none; 
+    }
+}
+.filter-input:focus {
+    border: none;
+}
+.results-section {
+    margin-bottom: 45px;
+}
+.results-label {
+    font-family: Montserrat;
+font-size: 16px;
+font-weight: 600;
+line-height: 19.5px;
+text-align: left;
+color: #363636;
+}
+
+.results-bar {
+    border: 1px solid #EAEAEA
+}
+
+.content-list {
+    width: 1290px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+
+
+.article-card {
+    width: 400px;
+    height: 530px;
+    gap: 0px;
+    border-radius: 5px 0px 0px 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0px 8px 24px 0px #0000000D;
+
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    > *:not(:first-child) {
+        margin-left: 25px;
+      }
+  
+    img {
+        object-fit: cover; 
+        object-position: center;
+        width: 400px;
+        height: 217px;
+    }
+  
+    h3 {
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29.26px;
+        text-align: left;
+        color: #363636;
+    }
+    
+    .date{
+        font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;  
+    color: #363636;
+    opacity: 0.6;
+    }
+
+    .summary {
+        font-family: Montserrat;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+    }
+
+  
+    .link {
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        text-align: left;
+        margin-bottom: 25px;
+    }
+
+    .highlight {
+        background: #FFF619A1;
+      }
+  }
+  
