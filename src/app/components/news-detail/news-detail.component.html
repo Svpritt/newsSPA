@@ -1,14 +1,16 @@
 <div class="detail">
-    <div>
-        <img [src]="article.imageUrl" alt="" class="news-image">
-
-    </div>
-    <div class="text">
-      <h2 class="title">{{ article.title }}</h2>
-      <p class="summary">{{ article.summary }}</p>
-    </div>
-    <div class="return">
-      <a class="link" [routerLink]="['/']">return <-</a>
-    </div>
+  <div>
+    <mat-card class="card">
+      <img mat-card-image [src]="article.imageUrl" alt="" class="news-image">
+    </mat-card>
   </div>
-  
+  <div class="text">
+    <h2 class="title">{{ article.title }}</h2>
+    <p class="summary">{{ article.summary }}</p>
+  </div>
+  <div class="return">
+    <a mat-button [routerLink]="['/']">
+      <mat-icon>keyboard_arrow_left</mat-icon> Back to homepage
+    </a>
+  </div>
+</div>

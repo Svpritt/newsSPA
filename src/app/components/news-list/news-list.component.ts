@@ -17,8 +17,14 @@ export class NewsListComponent implements OnInit {
   constructor(private newsService: NewsService) {}
   ngOnInit(): void {
     this.fetchArticles();
+
+    const currentFilterValue = this.newsService.getCurrentFilterValue();
+    if (currentFilterValue) {
+      this.filterControl.setValue(currentFilterValue);
+    }
+
     this.filterControl.valueChanges.pipe(
-      debounceTime(300)
+      debounceTime(350)
     ).subscribe(value => {
       if (value !== null) {
         this.newsService.setFilterKeywords(value);
@@ -26,9 +32,12 @@ export class NewsListComponent implements OnInit {
     });
 
     this.newsService.getFilteredArticles().subscribe(
-      data => this.articles = data,
+      data => {
+        this.articles = data; // its refreshing the articles
+      },
       error => console.error('Error fetching articles:', error)
     );
+  
   }
   fetchArticles(): void {
     this.newsService.getArticles().subscribe(
@@ -37,5 +46,18 @@ export class NewsListComponent implements OnInit {
     );
   }
 
-
 }
+
+
+
+//first try but after i`m learning how to use ngModel angular material
+
+// highlightKeywords(text: string): string {
+//   const keywords = this.filterControl.value?.toLowerCase();
+//   if (!keywords) {
+//     return text;
+//   }
+
+//   const pattern = new RegExp(keywords, 'gi');
+//   return text.replace(pattern, match => `<span class="highlight">${match}</span>`);
+// }
