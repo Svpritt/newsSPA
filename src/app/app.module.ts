@@ -10,16 +10,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewsListComponent } from './components/news-list/news-list.component';
-import { ArticleCardComponent } from './components/news-list/article-card/article-card.component';
 import { NewsDetailComponent } from './components/news-detail/news-detail.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DateFormatPipe } from './date-format.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewsListComponent,
-    ArticleCardComponent,
     NewsDetailComponent,
+    DateFormatPipe,
     
     
   ],

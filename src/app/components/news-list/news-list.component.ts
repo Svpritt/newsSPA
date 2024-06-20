@@ -34,9 +34,12 @@ export class NewsListComponent implements OnInit {
     this.newsService.getFilteredArticles().subscribe(
       data => {
         this.articles = data; // its refreshing the articles
+        console.log(this.articles)
       },
       error => console.error('Error fetching articles:', error)
     );
+
+    
   
   }
   fetchArticles(): void {
@@ -44,6 +47,7 @@ export class NewsListComponent implements OnInit {
       data => this.articles = data,
       error => console.error('Error fetching articles:', error)
     );
+    
   }
 
 }

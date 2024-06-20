@@ -19,11 +19,14 @@ export class NewsService {
       map(response => response.results.map((article: any) => ({
         id: article.id,
         title: article.title,
-        date: article.published_date,
+        date: article.published_at,
         summary: article.summary.length > 100 ? article.summary.substring(0, 97) + '...' : article.summary,
-        imageUrl: article.image_url
+        imageUrl: article.image_url,
+        article: article,
       })))
+      
     );
+    
   }
 
   setFilterKeywords(keywords: string): void {
