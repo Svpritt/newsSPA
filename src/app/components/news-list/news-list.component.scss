@@ -110,6 +110,9 @@ color: #363636;
 
     > *:not(:first-child) {
         margin-left: 25px;
+        margin-right: 25px;
+        font-family: Montserrat;
+        color: #363636;
       }
 
       .mat-icon {
@@ -127,6 +130,8 @@ color: #363636;
         margin-left: 25px;
         button {
           padding: 0;
+          color: #363636;
+
         }
       }
   
